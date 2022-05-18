@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Engine {
-    static int countRounds = 3;
+    public static final int ROUNDS_COUNT = 3;
 
-    static public void run(String description, List<String[]> rounds) {
+    public static void run(String description, List<String[]> rounds) {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,8 @@ public class Engine {
             String userAnswer = scanner.next();
 
             if (!correctAnswer.equals(userAnswer)) {
-                System.out.println(String.format("'%s' is wrong answer ;(. Correct answer was '%s'", userAnswer, correctAnswer));
+                System.out.println(
+                        String.format("'%s' is wrong answer ;(. Correct answer was '%s'", userAnswer, correctAnswer));
                 return;
             }
             System.out.println("Correct!");

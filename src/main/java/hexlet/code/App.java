@@ -13,12 +13,13 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.next();
         switch (choice) {
-            case "0":
-                break;
             case "1":
                 Cli.welcome();
             case "2":
                 Even.run();
+            case "0":
+            default:
+                return;
         }
     }
 }
