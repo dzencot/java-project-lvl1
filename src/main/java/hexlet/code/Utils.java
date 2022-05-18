@@ -1,7 +1,7 @@
 package hexlet.code;
 
-public class Util {
-    static int getRandomNumber(int min, int max) {
+public class Utils {
+    public static int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
 }

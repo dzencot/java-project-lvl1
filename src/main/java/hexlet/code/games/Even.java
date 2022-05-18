@@ -1,5 +1,7 @@
-package hexlet.code;
+package hexlet.code.games;
 
+import hexlet.code.Engine;
+import static hexlet.code.Utils.getRandomNumber;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,7 @@ public class Even {
     public static void run() {
         List<String[]> rounds = new ArrayList<>();
         for (var i = 0; i < Engine.ROUNDS_COUNT; i += 1) {
-            int number = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+            int number = getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             String question = Integer.toString(number);
             String correctAnswer = isEven(number) ? "yes" : "no";
             rounds.add(new String[]{question, correctAnswer});

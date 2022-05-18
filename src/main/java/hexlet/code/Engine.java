@@ -17,8 +17,8 @@ public class Engine {
             String correctAnswer = round[1];
 
             System.out.println(String.format("Question: %s", question));
-            System.out.println("Your answer: ");
             String userAnswer = scanner.next();
+            System.out.println(String.format("Your answer: %s", userAnswer));
 
             if (!correctAnswer.equals(userAnswer)) {
                 System.out.println(
