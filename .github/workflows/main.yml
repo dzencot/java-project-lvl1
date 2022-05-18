@@ -17,7 +17,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Gradle checkstyle
-          run: ./gradlew checkstyleMain
+        run: ./gradlew checkstyleMain
 
       - name: Execute Gradle build
         run: ./gradlew build
