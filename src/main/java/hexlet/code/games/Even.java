@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import static hexlet.code.Utils.getRandomNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 
