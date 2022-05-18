@@ -23,6 +23,7 @@ public class Engine {
             if (!correctAnswer.equals(userAnswer)) {
                 System.out.println(
                         String.format("'%s' is wrong answer ;(. Correct answer was '%s'", userAnswer, correctAnswer));
+                System.out.println(String.format("Let's try again, %s", userName));
                 return;
             }
             System.out.println("Correct!");
