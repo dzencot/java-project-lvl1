@@ -9,7 +9,7 @@ import java.util.List;
 public class Even {
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
-    private static String description = "Answer 'yes' if number even otherwise answer 'no'.";
+    private static final String DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'.";
 
     public static void run() {
         List<String[]> rounds = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Even {
             String correctAnswer = isEven(number) ? "yes" : "no";
             rounds.add(new String[]{question, correctAnswer});
         }
-        Engine.run(description, rounds);
+        Engine.run(DESCRIPTION, rounds);
     }
 
     private static boolean isEven(int number) {

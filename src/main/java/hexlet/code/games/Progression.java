@@ -11,7 +11,7 @@ public class Progression {
     private static final int PROGRESSION_LENGTH = 10;
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
-    private static String description = "Find the greatest common divisor of given numbers.";
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     public static void run() {
         List<String[]> rounds = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Progression {
             String question = String.join(" ", progression);
             rounds.add(new String[]{question, correctAnswer});
         }
-        Engine.run(description, rounds);
+        Engine.run(DESCRIPTION, rounds);
     }
 
     private static String[] getProgression(int start, int step, int length) {

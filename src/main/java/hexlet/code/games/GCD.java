@@ -10,7 +10,7 @@ import static hexlet.code.Utils.getRandomNumber;
 public class GCD {
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
-    private static String description = "Find the greatest common divisor of given numbers.";
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     public static void run() {
         List<String[]> rounds = new ArrayList<>();
@@ -18,21 +18,13 @@ public class GCD {
             int number1 = getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             int number2 = getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             String question = String.format("%d %d", number1, number2);
-            String correctAnswer = Integer.toString(getGcd(number1, number2));
+            String correctAnswer = Integer.toString(gcd(number1, number2));
             rounds.add(new String[]{question, correctAnswer});
         }
-        Engine.run(description, rounds);
+        Engine.run(DESCRIPTION, rounds);
     }
 
-    private static int getGcd(int number1, int number2) {
-        while (number1 != number2) {
-            if (number1 > number2) {
-                number1 = number1 - number2;
-            } else {
-                number2 = number2 - number1;
-            }
-        }
-
-        return number2;
+    private static int gcd(int number1, int number2) {
+        return number2 == 0 ? number1 : gcd(number2, number1 % number2);
     }
 }
