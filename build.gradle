@@ -22,7 +22,3 @@ application {
 run {
     standardInput = System.in
 }
-
-test {
-    useJUnitPlatform()
-}
